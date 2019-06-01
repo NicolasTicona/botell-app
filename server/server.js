@@ -1,3 +1,5 @@
+require('./config')
+
 const express = require('express')
 const app = express()
 const server = require('http').Server(app)
@@ -12,7 +14,7 @@ app.use(express.urlencoded({extended: false}))
 // Routes
 app.use(require('./routes.js'))
 
-mongoose.connect('mongodb://localhost:27017/botell-app', {useNewUrlParser: true}, (err, res) => {
+mongoose.connect(process.env.NOD_ENV, {useNewUrlParser: true}, (err, res) => {
 
     if(err) throw err;
 
@@ -20,6 +22,6 @@ mongoose.connect('mongodb://localhost:27017/botell-app', {useNewUrlParser: true}
 })
 
 
-server.listen(3000, () => {
+server.listen(process.env.PORT, () => {
     console.log('Server running ...')
 })

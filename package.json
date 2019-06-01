@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nicolas Ticona Valdivia <nikolasgamertv@gmail.com> (https://twitter.com/nicolas_tvop)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase-admin": "^8.0.0",
+    "mongoose": "^5.5.12"
+  }
 }
