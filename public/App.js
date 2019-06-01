@@ -42,41 +42,6 @@ class UserList extends React.Component{
   }
 */
 export default class App extends Component {
-  state = {
-    username = '',
-    email = '',
-    password = ''
-  };
-
-  handleChangeUsername = (e, fieldName) => {
-    this.setState({
-      username: e.target.value
-    });
-
-    this.uploadValidators(fieldName, e.target.value);
-  };
-
-  handleChangeEmail = (e, fieldName) => {
-    this.setState({
-      email: e.target.value
-    });
-
-    this.uploadValidators(fieldName, e.target.value);
-  };
-
-  handleChangePasssword = (e, fieldName) => {
-    this.setState({
-      password: e.target.value
-    });
-
-    this.uploadValidators(fieldName, e.target.value);
-  };
-
-  handleSave = () => {
-    console.log(this.state);
-  }
-
-  
   render() {
     return (
       <ImageBackground source={bgImage} style={styles.backgroundContainer}>
@@ -90,8 +55,6 @@ export default class App extends Component {
             placeholder = {'Username'}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangeUsername(e, 'username') }
-            value={ this.state.username }
           />
         </View>
         
@@ -101,8 +64,6 @@ export default class App extends Component {
             placeholder = {'Email'}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangeEmail(e, 'email') }
-            value={ this.state.email }
           />
         </View>
 
@@ -113,11 +74,9 @@ export default class App extends Component {
             secureTextEntry = {true}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangePasssword(e, 'password') }
-            value={ this.state.password }
           />
         </View>
-        <TouchableOpacity onCli style={styles.btnLogin}>
+        <TouchableOpacity style={styles.btnLogin}>
           <Text style={styles.text}>Iniciar Sesion</Text>
         </TouchableOpacity>
       </ImageBackground>
