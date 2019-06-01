@@ -1,0 +1,3 @@
+rootProject.name = 'botellApp'
+
+include ':app'
