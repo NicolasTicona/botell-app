@@ -42,6 +42,7 @@ class UserList extends React.Component{
   }
 */
 export default class App extends Component {
+<<<<<<< HEAD
   state = {
     username : '',
     email : '',
@@ -77,6 +78,8 @@ export default class App extends Component {
   }
 
   
+=======
+>>>>>>> b1e5f3af8979a58c25e946a5d2918c2eb8e911b2
   render() {
     return (
       <ImageBackground source={bgImage} style={styles.backgroundContainer}>
@@ -90,8 +93,6 @@ export default class App extends Component {
             placeholder = {'Username'}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangeUsername(e, 'username') }
-            value={ this.state.username }
           />
         </View>
         
@@ -101,8 +102,6 @@ export default class App extends Component {
             placeholder = {'Email'}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangeEmail(e, 'email') }
-            value={ this.state.email }
           />
         </View>
 
@@ -113,11 +112,9 @@ export default class App extends Component {
             secureTextEntry = {true}
             placeholderTextColor = {'rgba(255, 255, 255, 0.7)'}
             underlineColorAndroid = 'transparent'
-            onChange={ (e) => this.handleChangePasssword(e, 'password') }
-            value={ this.state.password }
           />
         </View>
-        <TouchableOpacity onCli style={styles.btnLogin}>
+        <TouchableOpacity style={styles.btnLogin}>
           <Text style={styles.text}>Iniciar Sesion</Text>
         </TouchableOpacity>
       </ImageBackground>
