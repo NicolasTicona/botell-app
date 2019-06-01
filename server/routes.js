@@ -25,6 +25,8 @@ router.get('/users', (req, res) => {
 
 router.post('/login', (req, res) => {
 
+    
+    let data = req.body
 
     Usuario.findOne({email: data.email}, (err, userDB) => {
         if(userDB) {
@@ -33,7 +35,6 @@ router.post('/login', (req, res) => {
             })
         }
         else{
-            let data = req.body
             let user = new Usuario()
             user.name = data.name
             user.email = data.email
