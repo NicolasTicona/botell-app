@@ -43,9 +43,9 @@ class UserList extends React.Component{
 */
 export default class App extends Component {
   state = {
-    username = '',
-    email = '',
-    password = ''
+    username : '',
+    email : '',
+    password : ''
   };
 
   handleChangeUsername = (e, fieldName) => {
