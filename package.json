@@ -10,7 +10,7 @@
   "author": "Nicolas Ticona Valdivia <nikolasgamertv@gmail.com> (https://twitter.com/nicolas_tvop)",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase-admin": "^8.0.0",
     "mongoose": "^5.5.12"
   }
